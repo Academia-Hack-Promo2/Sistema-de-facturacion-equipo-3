@@ -122,7 +122,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <i class="fa fa-angle-left pull-right"></i>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="facturas.html"><i class="fa fa-circle-o"></i>Facturas Pantuales</a></li>
+                            <li><a href="facturas.html"><i class="fa fa-circle-o"></i>Facturas Puntuales</a></li>
                             <li><a href="facturas_recurrentes.html"><i class="fa fa-circle-o"></i>Facturas Recurrentes</a></li>
                             <li><a href="caja_chica.html"><i class="fa fa-circle-o"></i>Caja Chica</a></li>
                         </ul>
@@ -147,7 +147,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- Your Page Content Here -->
                 <div class="row">
                     <div class="col-md-4">
-                        <a data-toggle="modal" data-target="#myModal2" href="#"><i class="icon-factura_recurrente"></i><br> <h4 class="text-center text-up">Nueva factura</h4> </a>
+                        <a data-toggle="modal" data-target="#myModal2" href="#"><i class="icon-factura_puntual"></i><br> <h4 class="text-center text-up">Nueva factura</h4> </a>
                     </div>
                     <!-- Modal -->
                     <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -168,6 +168,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                     <option value="ingreso">Internetvins 2015</option>
                                                     <option Value="egreso">4geeks</option>
                                                     <option Value="egreso">Unexpo</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="exampleInputEmail1">Servicios y Productos:</label>
+                                                <select id="t_type" class="form-control">
+                                                    <option value="default">Click aqui</option>
+                                                    <option value="ingreso">Curso Propedeutico</option>
+                                                    <option value="ingreso">Curso HACK</option>
                                                 </select>
                                             </div>
                                             <div class="form-group">
@@ -207,8 +215,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 <select id="t_type" class="form-control">
                                                     <option value="default">Click aqui</option>
                                                     <option value="ingreso">Borrador</option>
-                                                    <option value="ingreso">Cancelar</option>
                                                     <option Value="egreso">Por cancelar</option>
+                                                    <option value="ingreso">Pagada</option>
                                                 </select>
                                             </div>
                                             <div class="form-group">
@@ -237,7 +245,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <div class="row">
                                         <div class="col-md-12 modal-footer-edit">
                                             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
-                                            <button type="button" class="btn btn-primary" id="saveTransaction"><i class="icon-nav glyphicon glyphicon-save"></i> Registrar Factura</button>
+                                            <button type="button" class="btn btn-primary" id="saveTransaction"><i class="glyphicon glyphicon-save"></i> Registrar Factura</button>
                                         </div>
                                     </div>
                                 </div>
@@ -247,11 +255,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <!-- end modal -->
                     <div class="col-md-4">
                         <div class="text-center">
-                            <div class="well well-sm well-edit"><strong><a data-toggle="modal" data-target="#myModal3" href="#">Factura Numero: #1243OB</a></strong></div>
+                            <div class="well well-sm well-edit"><strong><a data-toggle="modal" data-target="#myModal3" href="#">Numero de Factura: #1243OB</a></strong></div>
                         </div>
                         <div class="well">
                             <h5><b>Cliente:</b> John Galindez</h5>
-                            <h5><b>Fecha:</b> 02/02/15</h5>
+                            <h5><b>Fecha:</b> Aun no definida.</h5>
+                            <h5><b>Servicio o Producto:</b> Curso Propedeutico.</h5>
                             <h5><b>Fecha de pago:</b> Aun no definida.</h5>
                             <h5><b>Estado:</b> Borrador</h5>
                             <h5><b>Tax:</b> 12$</h5>
@@ -261,10 +270,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <a href="#" class="btn btn-primary" role="button"><i class="fa fa-fw fa-edit"></i>Editar</a> <a href="#" class="btn btn-default" role="button"><i class="fa fa-fw fa-trash"></i>Eliminar</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    </div>                    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
-                            <div class="modal-content">
+                            <div class="modal-content modal-invoice">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                     <h4 class="modal-title">Invoice #00001</h4>
@@ -278,7 +286,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             <div class="col-xs-12">
                                                 <h2 class="page-header">
                 <i class="fa fa-globe"></i> Academia Hack.
-                <small class="pull-right">Fecha de la factura: 2/10/2014</small>
+                <small class="pull-right">Fecha de la factura: ...</small>
               </h2>
                                             </div>
                                             <!-- /.col -->
@@ -288,8 +296,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             <div class="col-sm-4 invoice-col">
                                                 De:
                                                 <address>
-                                                    <strong>Admin, Inc.</strong>
-                                                    <br> Intenetvins 2012.
+                                                    <strong>Academia Hack</strong>
+                                                    <br> Hack4geeks 2010.
                                                     <br> RIF: V-21312321
                                                     <br> Direccion Comercial: 795 Folsom Ave, Suite 600
                                                     <br> Direccion Fiscal: San Francisco, CA 94107
@@ -301,9 +309,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             <div class="col-sm-4 invoice-col">
                                                 Para:
                                                 <address>
-                                                    <strong>Academia Hack</strong>
-                                                    <br> Hack4geeks 2010.
+                                                    <strong>John Galindez.</strong>
+                                                    <br> Intenetvins 2012.
                                                     <br> RIF: V-21312321
+                                                    <br> Tipo: Estudiante.
                                                     <br> Direccion Comercial: 795 Folsom Ave, Suite 600
                                                     <br> Direccion Fiscal: San Francisco, CA 94107
                                                     <br> Telefono: (804) 123-5432
@@ -317,9 +326,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 <br/>
                                                 <b>Numero de la Factura:</b> 4F3S8J
                                                 <br/>
-                                                <b>Fecha de Pago:</b> 2/22/2014
+                                                <b>Fecha de Pago:</b> ...
                                                 <br/>
-                                                <b>Numero de referencia de pago:</b> 968-34567
+                                                <b>Numero de referencia de pago:</b> ....
                                                 <br>
                                                 <b>Estado: Cancelada</b>
                                             </div>
@@ -404,7 +413,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </section>
         </div>
         <!-- /.content-wrapper -->
-         <!-- Main Footer -->
+        <!-- Main Footer -->
         <footer class="main-footer">
             <!-- To the right -->
             <div class="pull-right hidden-xs">
